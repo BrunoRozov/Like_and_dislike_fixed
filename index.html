@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like and dislike</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <section class="content" aria-labelledby="question-title">
+            <div class="content1">
+                <h1 id="question-title">Wow, see mäng oli nii lahe!</h1>
+                <p class="hint">Anna tagasisidet, kas sulle mäng meeldis.</p>
+
+                <div class="like" aria-label="Tagasiside nupud">
+                    <button class="vote-button" type="button" data-vote="like" aria-label="Meeldis">
+                        <span aria-hidden="true">👍</span>
+                    </button>
+                    <button class="vote-button" type="button" data-vote="dislike" aria-label="Ei meeldinud">
+                        <span aria-hidden="true">👎</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="feedbackModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
+        <div class="modal-content">
+            <button class="close" id="closeFeedback" type="button" aria-label="Sulge">&times;</button>
+            <h2 id="feedback-title">Miks mäng ei meeldinud?</h2>
+            <p>Kirjuta lühidalt, mida saaks paremaks teha.</p>
+
+            <label class="textarea-label" for="feedbackText">Tagasiside</label>
+            <textarea id="feedbackText" placeholder="Kirjuta siia oma tagasiside..."></textarea>
+
+            <p id="feedbackError" class="error" role="alert"></p>
+
+            <div class="actions">
+                <button id="sendFeedback" type="button">Saada</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="thankModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="thank-title">
+        <div class="modal-content thank-content">
+            <button class="close" id="closeThank" type="button" aria-label="Sulge">&times;</button>
+            <h2 id="thank-title">Aitäh!</h2>
+            <p id="thankMessage">Sinu tagasiside on vastu võetud.</p>
+
+            <div class="actions center">
+                <button id="closeThankButton" type="button">Sulge</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
