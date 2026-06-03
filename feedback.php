@@ -9,9 +9,10 @@ $storageFile = $storageDir . DIRECTORY_SEPARATOR . 'feedback.json';
 function jsonResponse(array $payload, int $statusCode = 200): void
 {
     http_response_code($statusCode);
-    echo json_encode($payload, JSON_UNESCAPED_UNICODE);
+    echo json_encode($payload, JSON_UNESCAPED_UNICODE); 
     exit;
 }
+
 
 function prepareStorage(string $storageDir, string $storageFile): void
 {
